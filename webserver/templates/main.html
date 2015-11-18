@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>{{title}}</title>
+		<style type="text/css">
+			table.main {
+		    	width : 100%;
+		    	height : 100%;
+			}
+			table.inner {
+		    	width : 100%;
+		    	height : 100%;
+			}
+			td {
+			    text-align: center;
+			}
+			td.inner {
+				border-style: solid;
+			}
+		</style>
+		<script>
+			function requestData(path) {
+				var xhttp = new XMLHttpRequest();
+				xhttp.open("GET", path, true);
+				xhttp.send();
+			}
+		</script>
+	</head>
+
+	<body>
+		<h2>LocalTime: {{time}}</h2>
+		<table class='main'>
+			<tbody>
+				<td>
+					<table class='inner'>
+						<tbody>
+							<tr>
+								<td class='inner'><button type="button" onclick="requestData('/speed/up')">UP</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/forward')">FW</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/speed/down')">DN</button></td>
+							</tr>
+							<tr>
+								<td class='inner'><button type="button" onclick="requestData('/direction/left')">Left</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/stop')">Stop</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/right')">Right</button></td>
+							</tr>
+							<tr>
+								<td class='inner'>&nbsp;</td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/back')">Back</button></td>
+								<td class='inner'>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+					<table class='inner'>
+						<tbody>
+							<tr>
+								<td class='inner'><button type="button" onclick="requestData('/speed/up')">UP</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/forward')">FW</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/speed/down')">DN</button></td>
+							</tr>
+							<tr>
+								<td class='inner'><button type="button" onclick="requestData('/direction/left')">Left</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/stop')">Stop</button></td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/right')">Right</button></td>
+							</tr>
+							<tr>
+								<td class='inner'>&nbsp;</td>
+								<td class='inner'><button type="button" onclick="requestData('/direction/back')">Back</button></td>
+								<td class='inner'>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tbody>
+		</table>
+	</body>
+</html>
